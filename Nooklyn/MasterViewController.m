@@ -27,6 +27,13 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    self.titles = [NSArray arrayWithObjects:@"An Amazing Apartment",
+                   @"Hello World",
+                   @"Short walk to the J train",
+                   @"Amazing backyard area!",
+                   @"You will shit your pants",
+                   nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,14 +67,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return [self.titles count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
     return cell;
 }
 
