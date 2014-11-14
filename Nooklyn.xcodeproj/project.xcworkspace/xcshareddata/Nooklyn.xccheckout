@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93F3A307-BC5B-4FAF-878B-4B898A94568B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Nooklyn</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7AF41069BD29B0691D672C38CC327E9C53859A11</key>
+		<string>https://github.com/moizk/nooklyn-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Nooklyn.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7AF41069BD29B0691D672C38CC327E9C53859A11</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/moizk/nooklyn-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7AF41069BD29B0691D672C38CC327E9C53859A11</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7AF41069BD29B0691D672C38CC327E9C53859A11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Nooklyn</string>
+		</dict>
+	</array>
+</dict>
+</plist>

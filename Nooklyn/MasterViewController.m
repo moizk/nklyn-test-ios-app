@@ -7,6 +7,7 @@
 //
 
 #import "MasterViewController.h"
+#import "Listings.h"
 #import "DetailViewController.h"
 
 @interface MasterViewController ()
@@ -24,16 +25,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
     
-    self.titles = [NSArray arrayWithObjects:@"An Amazing Apartment",
-                   @"Hello World",
-                   @"Short walk to the J train",
-                   @"Amazing backyard area!",
-                   @"You will shit your pants",
-                   nil];
+    NSURL *blogURL = [NSURL URLWithString:@"http://www.nooklyn.com/listings.json" ];
+    NSData *jsonData = [NSData dataWithContentsOfURL:blogURL ];
+    NSError *error = nil;
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    self.blogPosts = [NSMutableArray array];
+    NSArray *blogPostsArray = [dataDictionary objectForKey:@"listings"];
+    
+    for (NSDictionary *bpDictionary in blogPostsArray) {
+        Listings *blogPost = [Listings blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
+        blogPost.author = [bpDictionary objectForKey:@"author"];
+        blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
+        blogPost.date = [bpDictionary objectForKey:@"date"];
+        blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
+        [self.blogPosts addObject:blogPost];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,13 +75,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.titles count];
+    return [self.blogPosts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
+    Listings *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    cell.imageView.image = image;
+    cell.textLabel.text = blogPost.title;
     return cell;
 }
 

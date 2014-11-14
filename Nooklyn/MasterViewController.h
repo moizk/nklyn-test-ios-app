@@ -10,7 +10,7 @@
 
 @interface MasterViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSMutableArray *blogPosts;
 
 @end
 

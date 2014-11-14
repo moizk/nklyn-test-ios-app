@@ -15,6 +15,7 @@
 		C8F743531A11B7740010F3E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8F743521A11B7740010F3E7 /* Images.xcassets */; };
 		C8F743561A11B7740010F3E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F743541A11B7740010F3E7 /* LaunchScreen.xib */; };
 		C8F743621A11B7740010F3E7 /* NooklynTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F743611A11B7740010F3E7 /* NooklynTests.m */; };
+		C8FA92841A1298800011B89F /* Listings.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FA92831A1298800011B89F /* Listings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		C8F7435B1A11B7740010F3E7 /* NooklynTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NooklynTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F743601A11B7740010F3E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8F743611A11B7740010F3E7 /* NooklynTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NooklynTests.m; sourceTree = "<group>"; };
+		C8FA92821A1298800011B89F /* Listings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listings.h; sourceTree = "<group>"; };
+		C8FA92831A1298800011B89F /* Listings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				C8F743521A11B7740010F3E7 /* Images.xcassets */,
 				C8F743541A11B7740010F3E7 /* LaunchScreen.xib */,
 				C8F743421A11B7740010F3E7 /* Supporting Files */,
+				C8FA92821A1298800011B89F /* Listings.h */,
+				C8FA92831A1298800011B89F /* Listings.m */,
 			);
 			path = Nooklyn;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				C8F743481A11B7740010F3E7 /* AppDelegate.m in Sources */,
 				C8F7434B1A11B7740010F3E7 /* MasterViewController.m in Sources */,
 				C8F743451A11B7740010F3E7 /* main.m in Sources */,
+				C8FA92841A1298800011B89F /* Listings.m in Sources */,
 				C8F7434E1A11B7740010F3E7 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +425,7 @@
 				C8F743671A11B7740010F3E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8F743681A11B7740010F3E7 /* Build configuration list for PBXNativeTarget "NooklynTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +434,7 @@
 				C8F7436A1A11B7740010F3E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
